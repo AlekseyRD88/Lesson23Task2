@@ -8,16 +8,18 @@ body {
    align-items: center;
    justify-content: center;
    height: 100vh;
-   @include landscape {
-      flex-direction: column;
-   }
-   @include portrait {
-      flex-direction: row;
-   }
-}
-.container {
    
 }
+.container {
+   display: flex;
+   @include landscape {
+      flex-direction: row;
+   }
+   @include portrait {
+      flex-direction: column;
+   } 
+}
+
 .square {
    width: 100px;
    height: 100px;
@@ -33,5 +35,11 @@ body {
    }
    @include for-extra-large-up {
       background-color: #c47;
+   }
+   @include landscape {
+      flex-direction: row;
+   }
+   @include portrait {
+      flex-direction: column;
    }
 }

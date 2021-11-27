@@ -23,13 +23,13 @@ $lg: 1200px;
    }
 }
 @mixin landscape {
-   @media (orientation: landscape) {
+   @media screen and (orientation: landscape) {
       @content;
    }
    
 }
 @mixin portrait {
-   @media (orientation: portrait) {
+   @media screen and (orientation: portrait) {
       @content;
    }
    
